@@ -1,0 +1,21 @@
+version: "3"
+services:
+  reservations:
+    container_name: reservations
+    restart: always
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    image: reservations
+    links:
+      - mongo
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ${MONGO_DB_PATH}:/data/db
+    ports:
+      - "27017:27017"
