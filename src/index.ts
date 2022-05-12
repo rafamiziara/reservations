@@ -1,7 +1,7 @@
-import "dotenv/config";
-import { Mongoose } from "@config/database/implementations/MongooseDatabase";
-import { app } from "./app";
-import { secrets } from "./config/secrets";
+import 'dotenv/config';
+import { Mongoose } from '@config/database/implementations/MongooseDatabase';
+import { app } from './app';
+import { secrets } from './config/secrets';
 
 const start = async () => {
   const mongoose = new Mongoose();

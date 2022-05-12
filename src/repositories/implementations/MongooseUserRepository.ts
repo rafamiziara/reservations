@@ -1,12 +1,12 @@
-import { model, Model } from "mongoose";
-import { User, UserModel, userSchema } from "@models/User";
-import { IUserRepository } from "@IRepositories/IUserRepository";
+import { model, Model } from 'mongoose';
+import { User, UserModel, userSchema } from '@models/User';
+import { IUserRepository } from '@IRepositories/IUserRepository';
 
 export class MongooseUserRepository implements IUserRepository {
   private model: Model<UserModel> = Object.create(null);
 
   constructor() {
-    this.model = model<UserModel>("UserSchema", userSchema);
+    this.model = model<UserModel>('UserSchema', userSchema);
   }
 
   async findById(id: string): Promise<UserModel | null> {

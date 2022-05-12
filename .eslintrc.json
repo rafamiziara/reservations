@@ -10,5 +10,33 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "import/prefer-default-export": "off",
+    "linebreak-style": "off",
+    "no-return-await": "off",
+    "no-undef": "off",
+    "no-empty-function": "off",
+    "object-curly-newline": "off",
+    "no-console": "off",
+    "import/no-unresolved": "off",
+    "no-useless-constructor": "off",
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "newline-per-chained-call": "off",
+    "consistent-return": "off",
+    "max-len": "off",
+    "class-methods-use-this": "off",
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "json": "always"
+      }
+    ]
+  }
 }

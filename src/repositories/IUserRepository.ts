@@ -1,4 +1,4 @@
-import { User, UserModel } from "@models/User";
+import { User, UserModel } from '@models/User';
 
 export interface IUserRepository {
   findById(id: string): Promise<UserModel | null>;

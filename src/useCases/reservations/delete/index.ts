@@ -1,6 +1,6 @@
-import { MongooseReservationRepository } from "@repositories/MongooseReservationRepository";
-import { DeleteReservationController } from "./DeleteReservationController";
-import { DeleteReservationUseCase } from "./DeleteReservationUseCase";
+import { MongooseReservationRepository } from '@repositories/MongooseReservationRepository';
+import { DeleteReservationController } from './DeleteReservationController';
+import { DeleteReservationUseCase } from './DeleteReservationUseCase';
 
 const mongooseReservationRepository = new MongooseReservationRepository();
 

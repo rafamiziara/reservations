@@ -1,5 +1,5 @@
-import { IReservationRepository } from "@IRepositories/IReservationRepository";
-import { IListReservationsRequestDTO } from "./ListReservationsDTO";
+import { IReservationRepository } from '@IRepositories/IReservationRepository';
+import { IListReservationsRequestDTO } from './ListReservationsDTO';
 
 export class ListReservationsUseCase {
   constructor(private reservationRepository: IReservationRepository) {}

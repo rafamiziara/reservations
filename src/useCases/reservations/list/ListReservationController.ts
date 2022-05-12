@@ -1,6 +1,6 @@
-import { ReservationModel } from "@models/Reservation";
-import { Request, Response } from "express";
-import { ListReservationsUseCase } from "./ListReservationsUseCase";
+import { ReservationModel } from '@models/Reservation';
+import { Request, Response } from 'express';
+import { ListReservationsUseCase } from './ListReservationsUseCase';
 
 export class ListReservationController {
   constructor(private listReservationUseCase: ListReservationsUseCase) {}
@@ -24,7 +24,7 @@ export class ListReservationController {
 
       return res.status(200).json(pagedResponse);
     } catch (err) {
-      return res.status(400).json({ message: err.message || "Unexpected error" });
+      return res.status(400).json({ message: err.message || 'Unexpected error' });
     }
   }
 }

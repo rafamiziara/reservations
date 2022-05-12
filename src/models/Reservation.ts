@@ -1,4 +1,4 @@
-import { Schema, Document } from "mongoose";
+import { Schema, Document } from 'mongoose';
 
 export interface Reservation {
   id?: string;
@@ -47,6 +47,6 @@ export const reservationSchema = new Schema(
         delete ret.__v;
       },
     },
-    collection: "reservations",
-  }
+    collection: 'reservations',
+  },
 );

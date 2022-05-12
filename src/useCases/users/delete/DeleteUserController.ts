@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { DeleteUserUseCase } from "./DeleteUserUseCase";
+import { Request, Response } from 'express';
+import { DeleteUserUseCase } from './DeleteUserUseCase';
 
 export class DeleteUserController {
   constructor(private deleteUserUseCase: DeleteUserUseCase) {}
@@ -11,7 +11,7 @@ export class DeleteUserController {
       const user = await this.deleteUserUseCase.execute(id);
       return res.status(200).json(user);
     } catch (err) {
-      return res.status(400).json({ message: err.message || "Unexpected error" });
+      return res.status(400).json({ message: err.message || 'Unexpected error' });
     }
   }
 }

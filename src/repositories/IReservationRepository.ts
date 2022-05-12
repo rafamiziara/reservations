@@ -1,4 +1,4 @@
-import { Reservation, ReservationModel } from "@models/Reservation";
+import { Reservation, ReservationModel } from '@models/Reservation';
 
 export interface IReservationRepository {
   findById(id: string): Promise<ReservationModel | null>;

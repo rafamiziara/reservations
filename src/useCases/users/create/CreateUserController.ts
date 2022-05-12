@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { CreateUserUseCase } from "./CreateUserUseCase";
+import { Request, Response } from 'express';
+import { CreateUserUseCase } from './CreateUserUseCase';
 
 export class CreateUserController {
   constructor(private createUserUseCase: CreateUserUseCase) {}
@@ -8,7 +8,7 @@ export class CreateUserController {
     const { email, name } = req.body;
 
     if (!email || !name) {
-      return res.status(400).json({ message: "Invalid arguments" });
+      return res.status(400).json({ message: 'Invalid arguments' });
     }
 
     try {
@@ -17,7 +17,7 @@ export class CreateUserController {
       return res.status(201).json(user);
     } catch (err) {
       return res.status(400).json({
-        message: err.message || "Unexpected error.",
+        message: err.message || 'Unexpected error.',
       });
     }
   }

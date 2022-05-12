@@ -1,4 +1,4 @@
-import { IUserRepository } from "@IRepositories/IUserRepository";
+import { IUserRepository } from '@IRepositories/IUserRepository';
 
 export class ListUsersUseCase {
   constructor(private userRepository: IUserRepository) {}

@@ -1,6 +1,6 @@
-import { MongooseReservationRepository } from "@repositories/MongooseReservationRepository";
-import { ListReservationController } from "./ListReservationController";
-import { ListReservationsUseCase } from "./ListReservationsUseCase";
+import { MongooseReservationRepository } from '@repositories/MongooseReservationRepository';
+import { ListReservationController } from './ListReservationController';
+import { ListReservationsUseCase } from './ListReservationsUseCase';
 
 const mongooseReservationRepository = new MongooseReservationRepository();
 

@@ -1,6 +1,6 @@
-import { MongooseUserRepository } from "../../../repositories/implementations/MongooseUserRepository";
-import { CreateUserController } from "./CreateUserController";
-import { CreateUserUseCase } from "./CreateUserUseCase";
+import { MongooseUserRepository } from '../../../repositories/implementations/MongooseUserRepository';
+import { CreateUserController } from './CreateUserController';
+import { CreateUserUseCase } from './CreateUserUseCase';
 
 const mongooseUserRepository = new MongooseUserRepository();
 

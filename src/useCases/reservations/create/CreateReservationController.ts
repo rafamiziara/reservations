@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { CreateReservationUseCase } from "./CreateReservationUseCase";
+import { Request, Response } from 'express';
+import { CreateReservationUseCase } from './CreateReservationUseCase';
 
 export class CreateReservationController {
   constructor(private createReservationUseCase: CreateReservationUseCase) {}
@@ -11,7 +11,7 @@ export class CreateReservationController {
       const reservation = await this.createReservationUseCase.execute({ seats, date: new Date(date), userId });
       return res.status(201).json(reservation);
     } catch (err) {
-      return res.status(400).json({ message: err.message || "Unexpected error" });
+      return res.status(400).json({ message: err.message || 'Unexpected error' });
     }
   }
 }

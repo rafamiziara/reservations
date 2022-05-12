@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { DeleteReservationUseCase } from "./DeleteReservationUseCase";
+import { Request, Response } from 'express';
+import { DeleteReservationUseCase } from './DeleteReservationUseCase';
 
 export class DeleteReservationController {
   constructor(private deleteReservationUseCase: DeleteReservationUseCase) {}
@@ -11,7 +11,7 @@ export class DeleteReservationController {
       const reservation = await this.deleteReservationUseCase.execute(id);
       return res.status(200).json(reservation);
     } catch (err) {
-      return res.status(400).json({ message: err.message || "Unexpected error" });
+      return res.status(400).json({ message: err.message || 'Unexpected error' });
     }
   }
 }

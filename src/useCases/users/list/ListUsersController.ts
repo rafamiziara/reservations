@@ -1,6 +1,6 @@
-import { UserModel } from "@models/User";
-import { Request, Response } from "express";
-import { ListUsersUseCase } from "./ListUsersUseCase";
+import { UserModel } from '@models/User';
+import { Request, Response } from 'express';
+import { ListUsersUseCase } from './ListUsersUseCase';
 
 export class ListUsersController {
   constructor(private listUsersUseCase: ListUsersUseCase) {}
@@ -22,7 +22,7 @@ export class ListUsersController {
 
       return res.status(200).json(pagedResponse);
     } catch (err) {
-      return res.status(400).json({ message: err.message || "Unexpected error" });
+      return res.status(400).json({ message: err.message || 'Unexpected error' });
     }
   }
 }

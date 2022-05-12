@@ -1,4 +1,4 @@
-import { Schema, Document } from "mongoose";
+import { Schema, Document } from 'mongoose';
 
 export interface User {
   id?: string;
@@ -37,6 +37,6 @@ export const userSchema = new Schema(
         delete ret.__v;
       },
     },
-    collection: "users",
-  }
+    collection: 'users',
+  },
 );

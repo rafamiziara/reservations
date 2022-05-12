@@ -1,12 +1,12 @@
-import { model, Model } from "mongoose";
-import { IReservationRepository } from "@IRepositories/IReservationRepository";
-import { Reservation, ReservationModel, reservationSchema } from "@models/Reservation";
+import { model, Model } from 'mongoose';
+import { IReservationRepository } from '@IRepositories/IReservationRepository';
+import { Reservation, ReservationModel, reservationSchema } from '@models/Reservation';
 
 export class MongooseReservationRepository implements IReservationRepository {
   private model: Model<ReservationModel> = Object.create(null);
 
   constructor() {
-    this.model = model<ReservationModel>("ReservationSchema", reservationSchema);
+    this.model = model<ReservationModel>('ReservationSchema', reservationSchema);
   }
 
   async findById(id: string): Promise<ReservationModel | null> {
